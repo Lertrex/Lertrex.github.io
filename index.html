@@ -1,0 +1,37 @@
+<!-- redirect.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Открываю Happ Proxy...</title>
+    <meta http-equiv="refresh" content="0;url=happ://import-subscription?url=aHR0cHM6Ly9naXN0LmdpdGh1YnVzZXJjb250ZW50LmNvbS9MZXJ0cmV4L2U4YzFmYWEyNDIyMmI4NDk0MTgyMWNkNTFjMTAwZjY4L3Jhdy9kZjRmMzU3MDBkODZmODk3ZDZhMGJiNDI5NWNhNDNjODcyYzY3NWIwL3N1YnNjcmlwdGlvbi50eHQ=">
+    <script>
+        // Попытка открыть happ://
+        window.location.href = "happ://import-subscription?url=aHR0cHM6Ly9naXN0LmdpdGh1YnVzZXJjb250ZW50LmNvbS9MZXJ0cmV4L2U4YzFmYWEyNDIyMmI4NDk0MTgyMWNkNTFjMTAwZjY4L3Jhdy9kZjRmMzU3MDBkODZmODk3ZDZhMGJiNDI5NWNhNDNjODcyYzY3NWIwL3N1YnNjcmlwdGlvbi50eHQ=";
+        
+        // Если Happ не установлен — показать инструкцию
+        setTimeout(function() {
+            document.body.innerHTML = `
+                <div style="font-family:sans-serif;text-align:center;padding:50px">
+                    <h2>📱 Happ Proxy не установлен</h2>
+                    <p>Установите приложение для импорта подписки:</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.happproxy" 
+                       style="background:#6C5CE7;color:white;padding:12px 24px;
+                              text-decoration:none;border-radius:8px;display:inline-block">
+                        Скачать Happ Proxy
+                    </a>
+                    <p style="margin-top:20px;font-size:14px;color:#666">
+                        Или скопируйте ссылку вручную:<br>
+                        <code style="background:#f0f0f0;padding:5px;border-radius:4px">
+                        https://gist.githubusercontent.com/Lertrex/.../subscription.txt
+                        </code>
+                    </p>
+                </div>
+            `;
+        }, 2000);
+    </script>
+</head>
+<body>
+    <p>🔄 Открываю Happ Proxy...</p>
+</body>
+</html>
